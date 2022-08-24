@@ -10,7 +10,7 @@
 //Task3
 //Console.WriteLine(JsonSerializer.Serialize(elements));
 //Array.ForEach(values, Console.WriteLine);
-//int count = 0;
+int count = 0;
 //WriteAllElements(values);
 
 //Task4
