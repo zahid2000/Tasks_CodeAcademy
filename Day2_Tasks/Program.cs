@@ -46,7 +46,7 @@ void CheckPrimeNumbers()
     for (int i = 0; i < arr.Length; i++)
     {
         isPrime = true;
-        for (int j = 2; j < 9; j++)
+        for (int j = 2; j <=9; j++)
         {
             if (arr[i] % j == 0)
             {
@@ -58,7 +58,7 @@ void CheckPrimeNumbers()
 
         if (isPrime)
         {
-            Console.WriteLine($"{arr[i]} asal sayidir");
+            Console.WriteLine($"{arr[i]} is prime");
         }
     }
 }
