@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 
-//int[] elements = { 1, 2, 3, 2, 1, 4, 5, 6, 1 };
-//string[] values = { "Kitab", "Defter", "Stol", "Stul", "Qelem" };
+int[] elements = { 1, 2, 3, 2, 1, 4, 5, 6, 1 };
+string[] values = { "Kitab", "Defter", "Stol", "Stul", "Qelem" };
 //Task1
 //CheckElementHowManyTimesExists(elements);
 //Task2
@@ -10,7 +10,9 @@
 //Task3
 //Console.WriteLine(JsonSerializer.Serialize(elements));
 //Array.ForEach(values, Console.WriteLine);
-//int count = 0;
+
+int count = 0;
+//Console.WriteLine(String.Join(",",values));
 //WriteAllElements(values);
 
 //Task4
@@ -32,7 +34,7 @@
 //bir dizi içerisinde bir eleman birden fazla olup olmadığını kontrol eden bir kod bloğu
 void CheckElementHowManyTimesExists(int[] elements)
 {
-
+    
     int[] existsElements = new int[0];
     int existsCount;
     for (int i = 0; i < elements.Length; i++)
@@ -40,7 +42,7 @@ void CheckElementHowManyTimesExists(int[] elements)
         existsCount = 0;
         if (Array.IndexOf(existsElements, elements[i]) == -1)
         {
-            for (int j = i; j < elements.Length; j++)
+            for (int j = i+1; j < elements.Length; j++)
             {
                 if (elements[j] == elements[i])
                 {
@@ -103,6 +105,7 @@ void WriteArraysValue()
         Console.WriteLine(values[i]);
     }
 }
+
 //sayısal 2 dizi içerisinde yer alan farklı elemanları yeni bir diziye, aynı olanları yeni bir diziye ekleyiniz.
 void SeperateArraysElements(int[] arr1, int[] arr2)
 {
@@ -125,7 +128,7 @@ void SeperateArraysElements(int[] arr1, int[] arr2)
     }
     for (int i = 0; i < arr2.Length; i++)
     {
-        if (Array.IndexOf(sameElements, arr2[i]) != -1 || Array.IndexOf(differentElements, arr2[i]) != -1)
+        if (Array.Exists(sameElements, x => x == arr2[i]) )
         {
             continue;
         }
@@ -144,3 +147,4 @@ void SeperateArraysElements(int[] arr1, int[] arr2)
     Console.WriteLine("SameElements : "+JsonSerializer.Serialize(sameElements));
     Console.WriteLine("differentElements : " + JsonSerializer.Serialize(differentElements));
 }
+
