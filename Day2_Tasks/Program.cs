@@ -8,16 +8,16 @@
 //CheckPrimeNumbers();
 
 //Task4 Run
-//UserNumbers();
+UserNumbers();
 
 //------------------------------------Methods------------------------------------------------------//
 #region Task1
 // Task1-100'e kadar olan sayıların negatif ve pozitif halini yazdırın.değişken kullanmayınız :)
 void Write100Numbers()
 {
-    foreach (int num in Enumerable.Range(1, 100))
+    foreach (int num in Enumerable.Range(0, 100))
     {
-        Console.WriteLine($"Positive = {num} and Negative = {num * -1}");
+        Console.WriteLine($"Positive = {num} and Negative = {-num}");
     }
 }
 #endregion
@@ -43,7 +43,7 @@ void CheckPrimeNumbers()
 {
     int[] arr = { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
     bool isPrime;
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i <= arr.Length; i++)
     {
         isPrime = true;
         for (int j = 2; j <=9; j++)
@@ -79,7 +79,13 @@ void UserNumbers()
         if (answer.ToLower() == "y")
         {
             Console.WriteLine("Enter the number");
-            int num = int.Parse(Console.ReadLine());
+            string answerNum = Console.ReadLine();
+            if (string.IsNullOrEmpty(answerNum))
+            {
+                continue;
+            }
+            int num = int.Parse(answerNum);
+            
             if (num % 2 == 1)
             {
                 Array.Resize(ref oddNumbers, oddNumbers.Length + 1);
@@ -87,12 +93,30 @@ void UserNumbers()
             }
 
         }
+       else if (string.IsNullOrEmpty(answer))
+        {
+            continue;
+        }
         else
         {
-            int[] sortedArray = SortArray(oddNumbers);
-            Console.WriteLine($"Min : {sortedArray[0]}, Max : {sortedArray[sortedArray.Length - 1]}");
-            Console.WriteLine($"The difference between the largest and smallest numbers in odd numbers : {(Math.Abs(sortedArray[0] - sortedArray[sortedArray.Length - 1]))}");
-            break;
+            if (oddNumbers.Length==0)
+            {
+                Console.WriteLine("Don't find odd numbers");
+                break;
+            }
+            if (oddNumbers.Length == 1)
+            {
+                Console.WriteLine($"Find one odd number : {oddNumbers[0]}");
+                break;
+            }
+            else
+            {
+                int[] sortedArray = SortArray(oddNumbers);
+                Console.WriteLine($"Min : {sortedArray[0]}, Max : {sortedArray[sortedArray.Length - 1]}");
+                Console.WriteLine($"The difference between the largest and smallest numbers in odd numbers : {(Math.Abs(sortedArray[0] - sortedArray[sortedArray.Length - 1]))}");
+                break;
+            }
+           
         }
     }
 }
