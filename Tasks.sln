@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAY7_task", "DAY7_task\DAY7
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day8_Tasks", "Day8_Tasks\Day8_Tasks.csproj", "{8DE6C331-4291-41F1-8BA8-FA735337E9F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day9_Task", "Day9_Task\Day9_Task.csproj", "{680A6F4B-8C9B-4289-92A0-7110A4FA9F40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day9_Task", "Day9_Task\Day9_Task.csproj", "{680A6F4B-8C9B-4289-92A0-7110A4FA9F40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
