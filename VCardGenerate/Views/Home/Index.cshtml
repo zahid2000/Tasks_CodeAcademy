@@ -1,0 +1,23 @@
+﻿using  VCardGenerate;
+ 
+@model VirtualFileResult
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    <form asp-action="Index" method="post">
+    
+        <input type="text" name="qrcode" placeholder="yazz"/>
+        <button type="submit"> Send</button>
+
+    </form>
+    <object type="image/svg+xml" data=@Model.FileName width="400" height="400">
+    </object>
+    
+</div>
