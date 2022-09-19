@@ -1,6 +1,6 @@
 ﻿using  VCardGenerate;
  
-@model VirtualFileResult
+
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -17,7 +17,7 @@
         <button type="submit"> Send</button>
 
     </form>
-    <object type="image/svg+xml" data=@Model.FileName width="400" height="400">
+    <object type="image/svg+xml" data="@ViewBag.path" width="400" height="400">
     </object>
     
 </div>

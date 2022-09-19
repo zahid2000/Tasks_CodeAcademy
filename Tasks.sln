@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PYP_Day16_Task", "PYP_Day16
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VCardGenerate", "VCardGenerate\VCardGenerate.csproj", "{9CBC6008-1172-4D29-9A37-546E9BB034D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYP_Day17_Task", "PYP_Day17_Task\PYP_Day17_Task.csproj", "{4FA3F7F0-6433-4C2D-860A-766869D209C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PYP_Day17_Task", "PYP_Day17_Task\PYP_Day17_Task.csproj", "{4FA3F7F0-6433-4C2D-860A-766869D209C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYP_Day18_Task", "PYP_Day18_Task\PYP_Day18_Task.csproj", "{FFCF4A0A-BA06-49A5-8FCB-9539AC6972EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{4FA3F7F0-6433-4C2D-860A-766869D209C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FA3F7F0-6433-4C2D-860A-766869D209C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FA3F7F0-6433-4C2D-860A-766869D209C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFCF4A0A-BA06-49A5-8FCB-9539AC6972EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFCF4A0A-BA06-49A5-8FCB-9539AC6972EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFCF4A0A-BA06-49A5-8FCB-9539AC6972EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFCF4A0A-BA06-49A5-8FCB-9539AC6972EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

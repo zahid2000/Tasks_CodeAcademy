@@ -1,13 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PYP_Day18_Task.Models;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Text;
-using Net.Codecrete.QrCodeGenerator;
-using VCardGenerate.Models;
-using VCardGenerate.Services;
 
-namespace VCardGenerate.Controllers
+namespace PYP_Day18_Task.Controllers
 {
     public class HomeController : Controller
     {
@@ -20,6 +15,7 @@ namespace VCardGenerate.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogError("Test");
             return View();
         }
 
@@ -33,20 +29,5 @@ namespace VCardGenerate.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-        [HttpPost]
-        public ActionResult Index(string qrcode)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                var qr = QrCode.EncodeText("Hello, world!", QrCode.Ecc.Medium);
-                string svg = qr.ToGraphicsPath(4);
-               string path= SaveSvg.SaveSvgString(svg);
-               ViewBag.path = path;
-                return View();
-
-            }
-        }
-
     }
 }
