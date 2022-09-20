@@ -10,6 +10,11 @@ namespace PYP_Day16_Task.Services.Concrete
 {
     public class QrService:IQrService
     {
+        public string GetQrCodeImg()
+        {
+            return "ss";
+        }
+
         public string GetVCardText(VCard card)
         {
             return $"Begin:VCARD \n" +

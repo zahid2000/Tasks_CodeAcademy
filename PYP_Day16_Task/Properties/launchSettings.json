@@ -6,7 +6,8 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:57064;http://localhost:57069"
+      "applicationUrl": "https://localhost:57064;http://localhost:57069",
+      "jsWebView2Debugging": true
     }
   }
 }

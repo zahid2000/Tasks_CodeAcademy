@@ -7,10 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Host.UseSerilog((ctx, lc) => lc
-.MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+.MinimumLevel.Override("Microsoft", LogEventLevel.Error)
 .MinimumLevel.Error()
 .WriteTo.Console()
-.WriteTo.Seq("http://localhost:5341/").MinimumLevel.Error()
+.WriteTo.Seq("http://localhost:5341/")
 .WriteTo.File(
     Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Logs", "log.txt"),
     rollingInterval: RollingInterval.Day,

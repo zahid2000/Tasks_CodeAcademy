@@ -11,5 +11,6 @@ namespace PYP_Day16_Task.Services.Abstract
     {
 
         string GetVCardText(VCard card);
+        string GetQrCodeImg();
     }
 }

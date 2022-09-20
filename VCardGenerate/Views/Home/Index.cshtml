@@ -1,5 +1,4 @@
-﻿using  VCardGenerate;
- 
+﻿
 
 @{
     ViewData["Title"] = "Home Page";
@@ -14,10 +13,11 @@
     <form asp-action="Index" method="post">
     
         <input type="text" name="qrcode" placeholder="yazz"/>
-        <button type="submit"> Send</button>
+        <button id="btn" type="button"> Send</button>
 
     </form>
-    <object type="image/svg+xml" data="@ViewBag.path" width="400" height="400">
-    </object>
+    
+    @Html.Raw(ViewBag.Result);
+  
     
 </div>

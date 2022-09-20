@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PYP_Day18_Task.Models;
+using Serilog;
 using System.Diagnostics;
 
 namespace PYP_Day18_Task.Controllers
@@ -15,12 +16,20 @@ namespace PYP_Day18_Task.Controllers
 
         public IActionResult Index()
         {
-            _logger.LogError("Test");
+            _logger.LogError("Home Controller");
             return View();
         }
 
         public IActionResult Privacy()
         {
+           Person person = new Person
+           {
+               Id = 1,
+               FirstName="Zahid",
+               Surname="Mamedov"
+           };
+            //Log.Error("{person}",person);
+            _logger.LogError("{@person} id {@Id}", person,person.Id);
             return View();
         }
 

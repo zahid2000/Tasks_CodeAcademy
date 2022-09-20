@@ -1,5 +1,7 @@
-﻿using System.Text;
-
+﻿using QRCoder;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Text;
 namespace VCardGenerate.Services
 {
     public static class SaveSvg
@@ -10,5 +12,6 @@ namespace VCardGenerate.Services
             File.WriteAllText(path, svg, Encoding.UTF8);
             return path;
         }
+
     }
 }
